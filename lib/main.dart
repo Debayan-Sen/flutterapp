@@ -12,7 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text("My Flutter App")),
-        body:  Text("Hello"),
+        body:  Container(
+          height: 200,
+          width: 200,
+          color: Colors.black26,
+          margin: EdgeInsets.all(20),
+        ),
         floatingActionButton: FloatingActionButton(onPressed: () {
           print("Henlo!!");
         },
