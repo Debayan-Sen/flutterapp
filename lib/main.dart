@@ -12,80 +12,56 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text("My Flutter App")),
+        drawer: Drawer(child: Column(
+          children: [
+            Text("link1"),
+            Text("link2")
+          ]),
+        ),
         body:  Container(
           height: 500,
           width: 400,
           padding: EdgeInsets.all(20),
-          color: Colors.black12,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.amber,
-                  child: Icon(Icons.supervised_user_circle_outlined,
-                    size: 60,
-                  ),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "Enter Name",
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                      width: 3,
+                      color: Colors.redAccent
+                    )
+                  )
                 ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
+              ),
+              const SizedBox(height: 20,),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "Enter Email",
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                      width: 3,
+                      color: Colors.redAccent
+                    )
+                  )
                 ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
-                )
-
-              ],),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.amber,
+              ),
+              const SizedBox(height: 20,),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "Enter Pin",
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                      width: 3,
+                      color: Colors.redAccent
+                    )
+                  )
                 ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
-                )
-
-              ],),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.amber,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
-                )
-
-              ],),
+              ),
             ],
           ),
         ),
