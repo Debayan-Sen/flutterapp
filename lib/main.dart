@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
               ),
               const SizedBox(height: 20,),
               TextField(
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Enter Email",
                   enabledBorder: OutlineInputBorder(
@@ -68,7 +69,37 @@ class MyApp extends StatelessWidget {
         floatingActionButton: FloatingActionButton(onPressed: () {
           print("Henlo!!");
         },
-        child: Icon(Icons.add),),
+        child: Icon(Icons.add),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Row(children: [
+            Expanded(
+              child: InkWell(
+                onTap: () {
+                  print("home");
+                },
+                child: Container(
+                  child: Icon(Icons.camera_alt),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                child: Icon(Icons.save),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                child: Icon(Icons.delete_forever_outlined),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                child: Icon(Icons.person),
+              ),
+            ),
+          ]),
+        ),
       ),
     );
   }
